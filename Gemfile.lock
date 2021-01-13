@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: d5b3e2bb13b1f0bab5059fc6f6e5fa5f184ed58b
+  specs:
+    ransack (2.4.1)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
+      i18n
+
+GIT
   remote: https://github.com/kaminari/kaminari
   revision: 904c63d3a100247d0f7e6c3bdcb3cfe801b7db5f
   specs:
@@ -161,10 +170,6 @@ GEM
       rake (>= 0.8.7)
       thor (~> 1.0)
     rake (13.0.3)
-    ransack (2.4.1)
-      activerecord (>= 5.2.4)
-      activesupport (>= 5.2.4)
-      i18n
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -234,7 +239,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
-  ransack
+  ransack!
   sass-rails (>= 6)
   selenium-webdriver
   spring

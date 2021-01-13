@@ -59,4 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 
 # Ransack para ordenar tablas y filtro
-gem 'ransack'
+gem 'ransack', github: 'activerecord-hackery/ransack'
