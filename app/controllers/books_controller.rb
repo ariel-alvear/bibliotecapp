@@ -5,9 +5,9 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     if params[:status].present?
-      @books = Book.where('status = ?', params[:status]).page(params[:page])
+      @books = Book.where('status = ?', params[:status]).page(params[:page]).order(sort_column + ' ' + sort_direction)
     else
-      @books = Book.all.page(params[:page])
+      @books = Book.all.page(params[:page]).order(sort_column + ' ' + sort_direction)
     end
   end
 
@@ -74,5 +74,13 @@ class BooksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def book_params
       params.require(:book).permit(:title, :author, :status, :given, :returned)
+    end
+
+    def sort_column
+      Book.column_names.include?(params[:sort]) ? params[:sort] : "title"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
     end
 end
