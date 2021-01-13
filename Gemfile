@@ -60,3 +60,6 @@ gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 
 # Ransack para ordenar tablas y filtro
 gem 'ransack', github: 'activerecord-hackery/ransack'
+
+# Gema para testear
+gem 'rails-controller-testing'
