@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Kaminari para paginación
 gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 
+# Ransack para ordenar tablas y filtro
+gem 'ransack'
