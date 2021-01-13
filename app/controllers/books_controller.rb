@@ -4,7 +4,11 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all.page(params[:page])
+    if params[:status].present?
+      @books = Book.where('status = ?', params[:status]).page(params[:page])
+    else
+      @books = Book.all.page(params[:page])
+    end
   end
 
   # GET /books/1

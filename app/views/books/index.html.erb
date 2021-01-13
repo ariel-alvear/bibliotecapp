@@ -2,11 +2,16 @@
 
 <h1>Books</h1>
 
-<%= search_form_for @q do |f| %>
-<%= f.label :title_or_description_or_author_cont %>
-<%= f.search_field :title_or_description_or_author_cont %>
-<%= f.submit %>
-<% end %>
+<form method="get" action="<%= books_path %>">
+    <div class="input-group">
+        <select name="status" class="custom-select col-3" id="inputGroupSelect04">
+            <option selected value="">Select book status</option>
+            <option value="1">In shelf</option>
+            <option value="0">Given</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3 mb-3">Filter</button>
+</form>
 
 <table>
   <thead>
