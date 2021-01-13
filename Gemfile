@@ -63,3 +63,6 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 
 # Gema para testear
 gem 'rails-controller-testing'
+
+# Faker para crear datos falsos
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'

@@ -8,6 +8,14 @@ GIT
       i18n
 
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 664cbafe9d15bddb97843dcbe107204e6e7291cb
+  branch: master
+  specs:
+    faker (2.15.1)
+      i18n (>= 1.6, < 2)
+
+GIT
   remote: https://github.com/kaminari/kaminari
   revision: 904c63d3a100247d0f7e6c3bdcb3cfe801b7db5f
   specs:
@@ -237,6 +245,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  faker!
   jbuilder (~> 2.7)
   kaminari!
   listen (~> 3.3)
